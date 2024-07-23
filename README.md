@@ -16,6 +16,13 @@ npm start # run production server
 npm run build # production build 
 
 ```
+## tailwindcss 
+settings.json (vscode)
+```
+    "files.associations": {
+        "*.css": "tailwindcss"
+    }
+```
 
 
 
