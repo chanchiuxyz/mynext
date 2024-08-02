@@ -1,8 +1,15 @@
+
+import { cookies } from "next/headers";
 import Image from "next/image";
 import Link from "next/link";
 
+export const revalidate = 5
+// export const dynamic = 'force-dynamic'
+
 export default async function Home() {
+  // cookies()
   // throw new Error("Page Error")
+  // console.log('hello')
   const data = await fetch('https://api.github.com/repos/vercel/next.js')
   console.log(data)
   return (
@@ -14,6 +21,8 @@ export default async function Home() {
     <h1 className="text-3xl font-bold underline">
       Home Page!
     </h1>
+    <div>{Date.now()}</div>
+
     </main>
   );
 }
